@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  database: sinatraevite_development
+  host: localhost
+test:
+  adapter: postgresql
+  database: sinatraevite_test
+  host: localhost
