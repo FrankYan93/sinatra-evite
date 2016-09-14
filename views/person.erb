@@ -5,10 +5,10 @@
 	<li>
     ......
 		<strong><%= pers.name %></strong>
-    birthday:<%= pers.date_of_birth %>
-    gender:<%= pers.gender %>
+    Birthday:<%= pers.date_of_birth %>
+    Gender:<%= pers.gender %>
     <% temp_zip=pers.zipcode.to_s %>
-    zipcode:<%= '0'*(5-temp_zip.length)+temp_zip %>
+    Zipcode:<%= '0'*(5-temp_zip.length)+temp_zip %>
 	</li>
 <% end %>
 </ol>

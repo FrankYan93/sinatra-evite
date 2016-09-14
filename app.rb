@@ -22,7 +22,7 @@ get '/events' do
 end
 
 get '/registrations' do
-	@registration_list = Person.all
+	@registration_list = Registration.all
 	erb :registration
 end
 
@@ -40,10 +40,28 @@ get '/registration/new' do
 	erb :registration_new
 end
 
-post '/submit' do
+post '/submit_p' do
 	@person = Person.new(params[:current_person])
 	if @person.save
 		redirect '/persons'
+	else
+		"Sorry, there was an error!"
+	end
+end
+
+post '/submit_e' do
+	@event = Event.new(params[:current_event])
+	if @event.save
+		redirect '/events'
+	else
+		"Sorry, there was an error!"
+	end
+end
+
+post '/submit_r' do
+	@registration = Registration.new(params[:current_registration])
+	if @registration.save
+		redirect '/registrations'
 	else
 		"Sorry, there was an error!"
 	end

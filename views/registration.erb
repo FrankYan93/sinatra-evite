@@ -1,0 +1,13 @@
+<h3>These are the Registrations!</h3>
+<ol>
+  <% i = 0 %>
+<% @registration_list.each do |pers| %>
+	<li>
+    ......
+		<strong><%= pers.person_id %></strong>
+    Event_id:<%= pers.event_id %>
+    Status:<%= pers.status %>
+	</li>
+<% end %>
+</ol>
+<a href="/">Hello go back to add a new one!</a>

@@ -1,0 +1,12 @@
+<h3>These are the Events!</h3>
+<ol>
+  <% i = 0 %>
+<% @event_list.each do |pers| %>
+	<li>
+    ......
+		<strong><%= pers.name %></strong>
+    Date:<%= pers.date %>
+	</li>
+<% end %>
+</ol>
+<a href="/">Hello go back to add a new one!</a>
